@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+            <form (ngSubmit)="saveInvoice()">
+
+                    <div class="form-group">
+                            <input type="text" name="Invoice number" [(ngModel)]="invoice.id"
+                             class="form-control col-md-12 "/>
+                    </div>
+
+                    <div class="form-group">
+                            <input type="text" name="Invoice Date" [(ngModel)]="invoice.invoiceDate" placeholder="Enter Invoice Date" 
+                            class="form-control col-md-12" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="Payment mode" [(ngModel)]="invoice.paymentMode"
+                        placeholder="Enter Payment mode" class="form-control col-md-12 "/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="Total amount excl tax" [(ngModel)]="invoice.totalHT" placeholder="Enter Total amount excl tax" 
+                        class="form-control col-md-12" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="Discount" [(ngModel)]="invoice.discount"
+                        placeholder="Enter Discount" class="form-control col-md-12 "/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="Total with discount" [(ngModel)]="invoice.totalDiscount" placeholder="Enter Total with discount" 
+                        class="form-control col-md-12" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="delivery fee" [(ngModel)]="invoice.deliveryFee"
+                        placeholder="Enter delivery fee" class="form-control col-md-12 "/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="Tax amount " [(ngModel)]="invoice.tva" placeholder="Enter Tax amount (%)" 
+                        class="form-control col-md-12" />
+                    </div>
+
+                    <div class="form-group">
+                    <input type="text" name="Total amount" [(ngModel)]="invoice.total"
+                     class="form-control col-md-12 "/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Invoice</button>
+                    <button *ngIf="invoice.id" (click)="deleteInvoice(invoice.id)" class="btn btn-danger">Delete</button>
+
+            </form>
+    </div>
+</div>

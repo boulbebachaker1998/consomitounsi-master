@@ -1,0 +1,30 @@
+.button-update {
+    margin: 10px;
+    border: none;
+    color: white;
+    padding: 7px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #2390b1;
+  }
+  .button-update:hover {
+    background-color: #02bac7;
+  }
+  .button-delete {
+    margin: 10px;
+    border: none;
+    color: white;
+    padding: 7px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #d42f2f;
+  }
+  .button-delete:hover {
+    background-color: #e64545;
+  }

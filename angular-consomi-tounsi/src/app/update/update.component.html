@@ -1,0 +1,195 @@
+<div class="container" >
+    <div class="row">
+        <div class="col-md-6">
+          
+            <form class="affichage" > 
+                <fieldset>
+                    <legend class="text-center"><h2>modify <b class="color-b">Products</b></h2> <span class="req"></span></legend>
+                    <div class="form-group">
+                      <label for="Name"><span class="req"> </span> CategoryProduit: </label>
+                      <input readonly required type="number"  name="CategoryProduit" id="CategoryProduit" [(ngModel)]="product.categoryProduit.idCategory"
+                          class="form-control phone"  #name="ngModel" />
+                      </div>
+                    <div class="form-group">
+                      <label for="Name"><span class="req"> </span> prixProduit: </label>
+                      <input  required type="number"  name="prixProduit" id="prixProduit" [(ngModel)]="product.prixProduit"
+                          class="form-control phone"  #name="ngModel" />
+                  </div>
+                  <div class="form-group">
+                    <label for="Name"><span class="req"> </span> nomProduit: </label>
+                    <input  type="text"  name="nomProduit" id="nomProduit" [(ngModel)]="product.nomProduit"
+                        class="form-control phone" #name="ngModel"  />
+                </div>
+                <div class="form-group">
+                  <label for="Name"><span class="req"> </span> codeabarraProduit: </label>
+                  <input readonly required type="number"  name="codeabarraProduit" id="codeabarraProduit" [(ngModel)]="product.codeabarraProduit"
+                      class="form-control phone" #name="ngModel"  />
+                </div>
+                <div class="form-group">
+                  <label for="Name"><span class="req"> </span>  dateCreation : </label>
+                  <input readonly required type="date: 'shortDate'"  name="dateCreation" id="dateCreation"  [(ngModel)]="product.dateCreation"
+                      class="form-control phone"   #name="ngModel" />
+                </div>
+                
+
+    
+           <div class="form-group">
+             <label for="Name"><span class="req"></span> quantity : </label>
+               <input required type="number"  name="quantity" id="quantity" [(ngModel)]="product.quantity"
+                  class="form-control phone"  #name="ngModel" />
+            </div>
+            <div class="form-group">
+              <label for="Name"><span class="req"></span> note : </label>
+                <input readonly required type="number"  name="note" id="note" [(ngModel)]="product.note"
+                   class="form-control phone"  #name="ngModel" />
+             </div>
+
+             <div class="form-group">
+              <label for="Name"><span class="req"></span> Image : </label>
+                <input   type="file"  name="imgaeFile" id="imgaeFile" (change)="onFileChange($event)" />
+             </div>
+
+             <div class="form-group">
+              <label for="Name"><span class="req"></span> Image : </label>
+              <img src="data:image/png;base64,{{product.image.dataValue}}"  width="100" height="100" />
+             </div>
+
+                    
+                    <div class="form-group" align="center">
+                        <input class="btn btn-outline-success" type="submit" name="submit" value="modifier Produit" (click)="modifyProduct()"  >
+                        <input class="btn btn-outline-success" value="Ajouter image" (click)="fileUploadProduct()"  >
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+ <!-- ======= Footer ======= -->
+ <section class="section-footer">
+   <div class="container">
+     <div class="row">
+       <div class="col-sm-12 col-md-4">
+         <div class="widget-a">
+           <div class="w-header-a">
+             <h3 class="w-title-a text-brand">E-commerce</h3>
+           </div>
+           <div class="w-body-a">
+             <p class="w-text-a color-text-a">
+               Our Agency will provide the best Services for you ! 
+               For more Informations : 
+             </p>
+           </div>
+           <div class="w-footer-a">
+             <ul class="list-unstyled">
+               <li class="color-a">
+                 <span class="color-text-a">Phone .</span> +216 72 378 317
+               </li>
+               <li class="color-a">
+                 <span class="color-text-a">Email .</span> consomitounsi@gmail.com
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       <div class="col-sm-12 col-md-4 section-md-t3">
+         <div class="widget-a">
+           <div class="w-header-a">
+             <h3 class="w-title-a text-brand">The Company</h3>
+           </div>
+           <div class="w-body-a">
+             <div class="w-body-a">
+               <ul class="list-unstyled">
+                 <li class="item-list-a">
+                   <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
+                 </li>
+                 <li class="item-list-a">
+                   <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
+                 </li>
+                 <li class="item-list-a">
+                   <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
+                 </li>
+                 <li class="item-list-a">
+                   <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
+                 </li>
+                 <li class="item-list-a">
+                   <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
+                 </li>
+                 <li class="item-list-a">
+                   <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="col-sm-12 col-md-4 section-md-t3">
+         <div class="widget-a">
+           <div class="w-header-a">
+             <h3 class="w-title-a text-brand">International sites</h3>
+           </div>
+           <div class="w-body-a">
+             <ul class="list-unstyled">
+               <li class="item-list-a">
+                 <i class="bi bi-chevron-right"></i> <a>Still working on providing worlwide Services</a>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <footer>
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <nav class="nav-footer">
+           <ul class="list-inline">
+             <li class="list-inline-item">
+               <a href="#">Home</a>
+             </li>
+             <li class="list-inline-item">
+               <a href="#">About</a>
+             <li class="list-inline-item">
+               <a href="#">Contact</a>
+             </li>
+           </ul>
+         </nav>
+         <div class="socials-a">
+           <ul class="list-inline">
+             <li class="list-inline-item">
+               <a href="#">
+                 <i class="bi bi-facebook" aria-hidden="true"></i>
+               </a>
+             </li>
+             <li class="list-inline-item">
+               <a href="#">
+                 <i class="bi bi-twitter" aria-hidden="true"></i>
+               </a>
+             </li>
+             <li class="list-inline-item">
+               <a href="#">
+                 <i class="bi bi-instagram" aria-hidden="true"></i>
+               </a>
+             </li>
+             <li class="list-inline-item">
+               <a href="#">
+                 <i class="bi bi-linkedin" aria-hidden="true"></i>
+               </a>
+             </li>
+           </ul>
+         </div>
+         <div class="copyright-footer">
+           <p class="copyright color-text-a">
+             &copy; Copyright
+             <span class="color-a">E-commerce</span> All Rights Reserved.
+           </p>
+         </div>
+         <div class="credits">
+         </div>
+       </div>
+     </div>
+   </div>
+

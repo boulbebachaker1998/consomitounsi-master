@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="row">
+            <form (ngSubmit)="saveStock()">
+
+                    <div class="form-group">
+                            <input type="text" name="stock number" [(ngModel)]="stock.id"
+                             class="form-control col-md-12 "/>
+                    </div>
+
+                    <div class="form-group">
+                            <input type="text" name="Stock name" [(ngModel)]="stock.stockName" placeholder="Enter Stock name" 
+                            class="form-control col-md-12" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="Product Number" [(ngModel)]="stock.productNumber" placeholder="Enter Product Number" 
+                        class="form-control col-md-12" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="Stock Type" [(ngModel)]="stock.stockType"
+                        placeholder="Enter stock Type" class="form-control col-md-12 "/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="stock Category" [(ngModel)]="stock.stockCategory" placeholder="Enter stock category" 
+                        class="form-control col-md-12" />
+                    </div>
+
+                    
+
+                    <button type="submit" class="btn btn-primary">Add stock</button>
+                    <button *ngIf="stock.id" (click)="deleteStock(stock.id)" class="btn btn-danger">Delete</button>
+
+            </form>
+    </div>
+</div>

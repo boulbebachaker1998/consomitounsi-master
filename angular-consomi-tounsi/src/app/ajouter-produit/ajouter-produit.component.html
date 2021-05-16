@@ -1,0 +1,180 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Zv4EPN22aLjoyAApeAT5U_yVEg0Dd7YWeTXdZDVNk9Zj6emp5lkFtM9xSrcYfcphfwJMCBQAOp4qEb3N0DUJHtwcrECt8rpyQGIfoSpXm7RRdRR8b1-4YpM1AzFI_NpeIk5RIfqQTUqvl-JPn2m5CkeaGEuLAHxeRySZtrJpXRDLNtVc43dhEQBkQH5UZfJ2KeDSHWbLiRd20g3-utGe4-eUrPy6qUemUU02Ow2mY8QQaxPghDZajklEAJ2GToMn3sllpsEdWXrz37RzR_GJRyl762m5xYRV8vGqJhPMNiK0AWoluTWakecK2d6nAoVbJHQe_HKy7PQivAiBCr0lLDzskbQp2TZKYOu5k4SAh80Cb8YjyVuEBvQXwJ1_8_v0urOaKr0I8ir9fbBhOB0BWwkWO6PgCeovwpWw4XUorPyXLd5KJnTCjcMXfyXhGJMF4rxzoCHRPGYE-ar3NuSUrIn-oSNRkUGkeup1w9isZOs" charset="UTF-8"></script><script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <div class="container" >
+      <div class="row">
+          <div class="col-md-6">
+            
+              <form class="affichage" > 
+                  <fieldset>
+                      <legend class="text-center"><h2>Add New <b class="color-b">Products</b></h2> <span class="req"></span></legend>
+  
+                      <div class="form-group">
+                          <label for="Name"><span class="req"> </span> CategoryProduit: </label>
+                          <input required type="number"  name="CategoryProduit" id="CategoryProduit" [(ngModel)]="product.categoryProduit.idCategory"
+                              class="form-control phone"  #name="ngModel" />
+                      </div>
+                      <div class="form-group">
+                        <label for="Name"><span class="req"> </span> prixProduit: </label>
+                        <input required type="number"  name="prixProduit" id="prixProduit" [(ngModel)]="product.prixProduit"
+                            class="form-control phone"  #name="ngModel" />
+                    </div>
+                    <div class="form-group">
+                      <label for="Name"><span class="req"> </span> nomProduit: </label>
+                      <input required type="text"  name="nomProduit" id="nomProduit" [(ngModel)]="product.nomProduit"
+                          class="form-control phone" #name="ngModel"  />
+                  </div>
+                  <div class="form-group">
+                    <label for="Name"><span class="req"> </span> codeabarraProduit: </label>
+                    <input required type="number"  name="codeabarraProduit" id="codeabarraProduit" [(ngModel)]="product.codeabarraProduit"
+                        class="form-control phone" #name="ngModel"  />
+                  </div>
+  
+      
+  
+             <div class="form-group">
+               <label for="Name"><span class="req"></span> quantity : </label>
+                 <input required type="number"  name="quantity" id="quantity" [(ngModel)]="product.quantity"
+                    class="form-control phone"  #name="ngModel" />
+              </div>
+ 
+  
+  
+                      
+                      <div class="form-group" align="center">
+                          <input class="btn btn-outline-success" type="submit" name="submit" value="Ajouter nouveau Produit" (click)="addProduct()"  >
+                      </div>
+                  </fieldset>
+              </form><!-- ends register form -->
+              <!-- second for to fiter user-->
+          </div><!-- ends col-6 -->
+  
+      </div>
+  </div>
+  
+   <!-- ======= Footer ======= -->
+   <section class="section-footer">
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-12 col-md-4">
+           <div class="widget-a">
+             <div class="w-header-a">
+               <h3 class="w-title-a text-brand">E-commerce</h3>
+             </div>
+             <div class="w-body-a">
+               <p class="w-text-a color-text-a">
+                 Our Agency will provide the best Services for you ! 
+                 For more Informations : 
+               </p>
+             </div>
+             <div class="w-footer-a">
+               <ul class="list-unstyled">
+                 <li class="color-a">
+                   <span class="color-text-a">Phone .</span> +216 72 378 317
+                 </li>
+                 <li class="color-a">
+                   <span class="color-text-a">Email .</span> consomitounsi@gmail.com
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+         <div class="col-sm-12 col-md-4 section-md-t3">
+           <div class="widget-a">
+             <div class="w-header-a">
+               <h3 class="w-title-a text-brand">The Company</h3>
+             </div>
+             <div class="w-body-a">
+               <div class="w-body-a">
+                 <ul class="list-unstyled">
+                   <li class="item-list-a">
+                     <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
+                   </li>
+                   <li class="item-list-a">
+                     <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
+                   </li>
+                   <li class="item-list-a">
+                     <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
+                   </li>
+                   <li class="item-list-a">
+                     <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
+                   </li>
+                   <li class="item-list-a">
+                     <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
+                   </li>
+                   <li class="item-list-a">
+                     <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-sm-12 col-md-4 section-md-t3">
+           <div class="widget-a">
+             <div class="w-header-a">
+               <h3 class="w-title-a text-brand">International sites</h3>
+             </div>
+             <div class="w-body-a">
+               <ul class="list-unstyled">
+                 <li class="item-list-a">
+                   <i class="bi bi-chevron-right"></i> <a>Still working on providing worlwide Services</a>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+   <footer>
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+           <nav class="nav-footer">
+             <ul class="list-inline">
+               <li class="list-inline-item">
+                 <a href="#">Home</a>
+               </li>
+               <li class="list-inline-item">
+                 <a href="#">About</a>
+               <li class="list-inline-item">
+                 <a href="#">Contact</a>
+               </li>
+             </ul>
+           </nav>
+           <div class="socials-a">
+             <ul class="list-inline">
+               <li class="list-inline-item">
+                 <a href="#">
+                   <i class="bi bi-facebook" aria-hidden="true"></i>
+                 </a>
+               </li>
+               <li class="list-inline-item">
+                 <a href="#">
+                   <i class="bi bi-twitter" aria-hidden="true"></i>
+                 </a>
+               </li>
+               <li class="list-inline-item">
+                 <a href="#">
+                   <i class="bi bi-instagram" aria-hidden="true"></i>
+                 </a>
+               </li>
+               <li class="list-inline-item">
+                 <a href="#">
+                   <i class="bi bi-linkedin" aria-hidden="true"></i>
+                 </a>
+               </li>
+             </ul>
+           </div>
+           <div class="copyright-footer">
+             <p class="copyright color-text-a">
+               &copy; Copyright
+               <span class="color-a">E-commerce</span> All Rights Reserved.
+             </p>
+           </div>
+           <div class="credits">
+           </div>
+         </div>
+       </div>
+     </div>

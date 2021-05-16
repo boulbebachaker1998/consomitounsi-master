@@ -1,0 +1,214 @@
+
+<body>
+   <div class="container">
+       <div class="table-responsive">
+           <div class="table-wrapper">
+               <div class="table-title">
+                   <div class="row">
+                       <div class="col-xs-6">
+                           <h2>products<b class="color-b">List</b></h2>
+                       </div>
+                       
+                       <li class="nav-item">
+             <a class="btn btn-outline-success" routerLink="/ajouter" > + add new product</a>
+          
+           </li>
+           
+        
+                   </div>
+               </div>
+               <div class="container">
+                <div class="row">
+                   <div id="custom-search-input">
+                    
+                                   <div class="col-md-4" style="text-align: right ;">
+                                        <input type="text" class="search-query form-control" placeholder="Search With name"  name="nomProduit" [(ngModel)]="nom"/>
+                                           <span class="input-group-btn">
+                                          
+                                             <button class="btn btn-danger" type="button" (click)="findProductByName()">
+                                                  <span class=" glyphicon glyphicon-search"></span>
+                                               </button>
+                                              
+                                            </span>
+                                    </div>
+                             </div>
+                </div>
+                </div>
+               <table class="table table-striped table-hover">
+                   <thead>
+                       <tr>
+                           <th>
+                               <span class="custom-checkbox">
+                                   <input type="checkbox" id="selectAll">
+                                   <label for="selectAll"></label>
+                               </span>
+                           </th>
+                           <th>idProduit</th>
+                           <th>nomCategory</th>
+                           <th>prixProduit</th>
+                           <th>nomProduit</th>
+                           <th>codeabarraProduit</th>
+                           <th>dateCreation</th>
+                           <th>quantity</th>
+                           <th></th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr *ngFor="let product of listProduct  ">
+                           <td>
+                               <span class="custom-checkbox">
+                                   <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                   <label for="checkbox1"></label>
+                               </span>
+                           </td>  
+               <td>{{product.idProduit}}</td>
+               <td>{{product.categoryProduit.nomCategory}}</td>  
+               <td>{{product.prixProduit}}</td>
+               <td>{{product.nomProduit}}</td>  
+               <td>{{product.codeabarraProduit}}</td>   
+               <td>{{product.dateCreation  | date: 'shortDate'}}</td>
+               <td>{{product.quantity}}</td>
+               
+               <td align="center">
+               <button class="button-delete"   (click)="delteProduct(product.idProduit)">Delete</button>
+                 
+               </td>
+               <td align="center">
+               <button  class="button-update"  (click)="updateproduit(product)" >Update</button>
+              </td>
+               </tr>
+                        
+                   </tbody>
+               </table>
+               
+       </div>        
+   </div>
+
+   
+
+   <!-- ======= Footer ======= -->
+   <section class="section-footer">
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-12 col-md-4">
+             <div class="widget-a">
+               <div class="w-header-a">
+                 <h3 class="w-title-a text-brand">E-commerce</h3>
+               </div>
+               <div class="w-body-a">
+                 <p class="w-text-a color-text-a">
+                   Our Agency will provide the best Services for you ! 
+                   For more Informations : 
+                 </p>
+               </div>
+               <div class="w-footer-a">
+                 <ul class="list-unstyled">
+                   <li class="color-a">
+                     <span class="color-text-a">Phone .</span> +216 72 378 317
+                   </li>
+                   <li class="color-a">
+                     <span class="color-text-a">Email .</span> consommitounsi@gmail.com
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="col-sm-12 col-md-4 section-md-t3">
+             <div class="widget-a">
+               <div class="w-header-a">
+                 <h3 class="w-title-a text-brand">The Company</h3>
+               </div>
+               <div class="w-body-a">
+                 <div class="w-body-a">
+                   <ul class="list-unstyled">
+                     <li class="item-list-a">
+                       <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
+                     </li>
+                     <li class="item-list-a">
+                       <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
+                     </li>
+                     <li class="item-list-a">
+                       <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
+                     </li>
+                     <li class="item-list-a">
+                       <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
+                     </li>
+                     <li class="item-list-a">
+                       <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
+                     </li>
+                     <li class="item-list-a">
+                       <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-sm-12 col-md-4 section-md-t3">
+             <div class="widget-a">
+               <div class="w-header-a">
+                 <h3 class="w-title-a text-brand">International sites</h3>
+               </div>
+               <div class="w-body-a">
+                 <ul class="list-unstyled">
+                   <li class="item-list-a">
+                     <i class="bi bi-chevron-right"></i> <a>Still working on providing worlwide Services</a>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+     <footer>
+       <div class="container">
+         <div class="row">
+           <div class="col-md-12">
+             <nav class="nav-footer">
+               <ul class="list-inline">
+                 <li class="list-inline-item">
+                   <a href="#">Home</a>
+                 </li>
+                 <li class="list-inline-item">
+                   <a href="#">About</a>
+                 <li class="list-inline-item">
+                   <a href="#">Contact</a>
+                 </li>
+               </ul>
+             </nav>
+             <div class="socials-a">
+               <ul class="list-inline">
+                 <li class="list-inline-item">
+                   <a href="#">
+                     <i class="bi bi-facebook" aria-hidden="true"></i>
+                   </a>
+                 </li>
+                 <li class="list-inline-item">
+                   <a href="#">
+                     <i class="bi bi-twitter" aria-hidden="true"></i>
+                   </a>
+                 </li>
+                 <li class="list-inline-item">
+                   <a href="#">
+                     <i class="bi bi-instagram" aria-hidden="true"></i>
+                   </a>
+                 </li>
+                 <li class="list-inline-item">
+                   <a href="#">
+                     <i class="bi bi-linkedin" aria-hidden="true"></i>
+                   </a>
+                 </li>
+               </ul>
+             </div>
+             <div class="copyright-footer">
+               <p class="copyright color-text-a">
+                 &copy; Copyright
+                 <span class="color-a">EstateAgency</span> All Rights Reserved.
+               </p>
+             </div>
+             <div class="credits">
+             </div>
+           </div>
+         </div>
+        
+       </div>
